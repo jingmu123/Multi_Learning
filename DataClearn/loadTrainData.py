@@ -11,6 +11,7 @@ class dataLoad:
         '''
         self.stoplist=[]
         self.traindata=[]
+        self.dataOfDir=[]
         self.stopspath=stopspath
 
     def loadstop(self):
@@ -56,6 +57,8 @@ class dataLoad:
                 print(path)
                 data=self.loadData(path,is_stop)
                 self.savedata(data,"./results11",filepath)
+                self.dataOfDir.append(data)
+        return self.dataFromDir()
 
     def savedata(self,data,savepath,filename):
         '''
