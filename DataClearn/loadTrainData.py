@@ -58,7 +58,7 @@ class dataLoad:
                 data=self.loadData(path,is_stop)
                 self.savedata(data,"./results11",filepath)
                 self.dataOfDir.append(data)
-        return self.dataFromDir()
+        return self.dataFromDir
 
     def savedata(self,data,savepath,filename):
         '''
